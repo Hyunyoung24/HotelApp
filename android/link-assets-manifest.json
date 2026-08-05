@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/KOROAD_Bold.ttf",
+      "sha1": "ee1903c94c48ca3e16fe08c44417182602eb3c63"
+    },
+    {
+      "path": "src/assets/fonts/KOROAD_Light.ttf",
+      "sha1": "d48a07c5c3a804026bd1ad17f9d326979b23858d"
+    },
+    {
+      "path": "src/assets/fonts/KOROAD_Medium.ttf",
+      "sha1": "87318af45c492aa7b027ced4a2c807af1b7c7e96"
+    }
+  ]
+}

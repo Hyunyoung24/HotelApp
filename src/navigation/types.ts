@@ -12,4 +12,6 @@ export type RootStackParamList = {
     totalPrice: number;
   };
   Menu: undefined;
+  About: undefined;
+  Info: undefined;
 };

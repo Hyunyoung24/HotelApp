@@ -1,97 +1,50 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# HotelApp
+호텔 객실 조회 및 예약 모바일 앱입니다. 
+기존에 웹으로 구현했던 호텔 예약 서비스(https://github.com/Hyunyoung24/HotelPage)를 React Native 기반 모바일 앱으로 새롭게 구현한 프로젝트입니다.
 
-# Getting Started
+## 기술 스택
+- **React Native** / **TypeScript**
+- **React Navigation**
+- **json-server**
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 주요 기능
+- **객실 목록/상세**: 객실별 이미지 갤러리, 상세 정보 조회, 좋아요 토글
+- **예약**: 달력 기반 날짜 선택, 시즌/주말/공휴일별 요금 자동 계산, 예약 정보 입력 및 등록
+- **홈 화면**: 배너 캐러셀, 객실 바로가기, 이벤트 섹션
+- **부가 기능**: 스플래시 화면, 사이드 메뉴, 호텔 소개/오시는 길
 
-## Step 1: Start Metro
+## 화면 구성
+| 화면 | 설명 |
+|------|------|
+| Splash | 앱 시작 화면 |
+| Home | 배너, 객실 목록, 이벤트 |
+| RoomList | 전체 객실 목록 (탭 전환) |
+| RoomDetail | 객실 갤러리, 시즌별 요금표, 예약 버튼 |
+| ReservationDate | 달력에서 체크인/체크아웃 날짜 선택 |
+| ReservationInfo | 예약자 정보 입력 및 최종 확인 |
+| About / Info | 호텔 소개, 오시는 길 |
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
-
-To start the Metro dev server, run the following command from the root of your React Native project:
-
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
+## 프로젝트 구조
+```
+src/
+├── api.ts              # API 호출 함수 및 타입 정의
+├── hooks.ts            # 데이터 조회 커스텀 훅
+├── theme.ts            # 폰트, 이미지 매핑
+├── components/         # 재사용 UI 컴포넌트
+├── screens/            # 화면 컴포넌트
+├── navigation/         # 네비게이션 설정
+└── context/            # Context (메뉴 상태 관리)
 ```
 
-## Step 2: Build and run your app
+## 실행 방법
+```bash
+# npm/npm run은 yarn으로 대체 가능
+# 의존성 설치
+npm install
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+# json-server 실행 (별도 터미널)
+npm run server
 
-### Android
-
-```sh
-# Using npm
+# Android 실행
 npm run android
-
-# OR using Yarn
-yarn android
 ```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
